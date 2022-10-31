@@ -5,7 +5,7 @@ public class LogginLab {
     private final static Logger logger = Logger.getLogger(LogginLab.class.getName());
 
     private Integer threshold = 0;
-
+    
     public LogginLab() {
         this.threshold = 0;
     }
@@ -24,12 +24,18 @@ public class LogginLab {
         return threshold;
     }
 
+
     public void setThreshold(Integer threshold) {
         this.threshold = threshold;
     }
+    //THIS. threshold is the variable name on this page/class, while the other is from the test class.
 
     public boolean thresholdExceeds(Integer limit) {
         return (this.threshold > limit);
+    }
+
+    public boolean thresholdReached(Integer limit) {
+        return (this.threshold < limit);
     }
 
     // Write a method called thresholdReached, returns true if argument 'limit' is over the threshold.
